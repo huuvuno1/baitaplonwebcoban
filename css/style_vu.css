@@ -1,0 +1,385 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: "Roboto","HelveticaNeue","Helvetica Neue",sans-serif;
+}
+
+.vitritrang{
+    background-color: #f6f6f6;
+}
+
+.vitritrang ul li.tenvitri{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.vitritrang a{
+    text-decoration: none;
+    color: #898989;
+    line-height: 50px;
+    font-size: 14px;
+}
+
+.vitritrang a span{
+    color: #2f2f33;
+}
+
+.container ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.ketquatimkiem{
+    margin-top: 20px;
+}
+
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
+
+.product-vendor{
+    color: #2f2f33;
+    font-size: 14px;
+}
+.product{
+    box-sizing: border-box;
+    padding: 15px;
+    width: 300px;
+    float: left;
+}
+
+.product-box{
+    padding: 15px 15px 15px 15px;
+    border: 1px solid #ebebeb;
+}
+.khungduoi{
+    padding-top: 5px;
+    border-top: 0;
+    height: 136px;
+}
+.product-thumnail{
+    position: relative;
+    height: 180px;
+}
+.product-thumnail img{
+    width: 100%;
+}
+
+/* xử lí xem chi tiết sản phẩm */
+.show-option-selection{
+    position: absolute;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    top: 75%;
+    left: 0;
+    right: 0;
+    line-height: 45px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.product:hover .show-option-selection,  .view-details, .add-to-cart{
+    transition: 0.7s ease;
+    opacity: 1;
+    transform: scale(1, 1) !important;
+}
+.product:hover .img-thumnail{
+    transition: 0.7s ease;
+    opacity: 0.5;
+}
+.product:hover  .view-details{
+    background-color: #eaf1d8cc;
+    box-shadow: 1px 1px 5px #ccc;
+}
+.product:hover  .add-to-cart{
+    background-color: #eaf1d8cc;
+    box-shadow: 1px 1px 5px #ccc;
+}
+
+.view-details:hover {
+    background-color: #f0fcd1cc !important;
+    line-height: 35px !important;
+}
+
+.add-to-cart:hover{
+    background-color: #f0fcd1cc !important;
+    line-height: 35px !important;
+}
+
+.view-details{
+    display: block;
+    width: 60px;
+    cursor: pointer;
+    border-top-left-radius: 35%;
+    border-bottom-left-radius: 35%;
+}
+.add-to-cart
+{
+    width: 60px;
+    cursor: pointer;
+    border-top-right-radius: 35%;
+    border-bottom-right-radius: 35%;
+}
+
+.sale-count{
+    position: absolute;
+    line-height: 20px;
+    right: 0px;
+    background: #e42323;
+    color: white;
+    width: 50px;
+    font-size: 13px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.sale-count::before{
+    content: "";
+    position: absolute;
+    left: -10px;
+    line-height: 20px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid #e42323;
+}
+
+.product-info{
+    text-align: center;
+}
+.product-name h4{
+    margin: 10px 0;
+}
+.product-name a{
+    text-decoration: none;
+    color: #2f2f33 ;
+}
+.product-name a:hover{
+    color: #2775d2;
+}
+.product-price-old{
+    text-decoration: line-through;
+    font-size: 12px;
+    margin-right: 10px;
+    color: gray;
+}
+
+.product-price-new{
+    font-size: 15px;
+    color: red;
+}
+
+.text-2-line{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 36px;
+}
+
+.icon{
+    width: 15px !important;
+    height: 15px !important;
+}
+.clear{
+    clear: both;
+}
+/* window gio hang -  */
+.show-form{
+    position: fixed;
+    z-index: 5555;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+}
+.frame{
+    width: 900px;
+    height: 450px;
+    position: absolute;
+    background-color: white;
+    z-index: 10000;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 5%;
+    
+    border-radius: 5px;
+}
+.fade{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.4;
+}
+
+.flex-layout{
+    border-radius: 5px;
+    background-color: white;
+    display: flex !important;
+    padding: 40px 30px;
+}
+
+.left-frame{
+
+    width: 45%;
+    background-color: white;
+}
+
+.right-frame{
+    width: 55%;
+    padding: 0 30px;
+}
+
+.right-frame h3{
+    margin: 0;
+    
+}
+
+.right-frame  a{
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.right-frame .product-price-new, .right-frame .product-price-old{
+    font-size: 25px !important;
+    margin-right: 20px;
+}
+#big-img{
+    height: 300px;
+    border: 1px solid #f8f8f8;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #f1efef;
+}
+
+#big-img img{
+    width: 100%;
+    max-height: 100%;
+    
+}
+
+.list-img{
+    margin-top: 20px;
+    height: 80px;
+    padding: 10px 5px 5px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.small-img{
+    cursor: pointer;
+    margin: 0 5px;
+    width: 40px;
+    max-height: 80px;
+    border-radius: 5px;
+    border: 1px solid #e9e5e5;
+    padding: 15px 7px;
+    background-color: white;
+}
+
+.thongtin{
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.status{
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 5px;
+    padding: 2px 3px;
+    color: white;
+}
+
+.line{
+    margin: 30px 0;
+    height: 1px;
+    color: gainsboro;
+}
+
+.description .text-2-line{
+    color: #949494;
+    margin-bottom: 10px;
+}
+
+.description a{
+    font-size: 15px;
+    color: blue;
+    text-decoration: underline;
+}
+.description a:hover{
+    color: chocolate;
+}
+.muahang{
+    margin-top: 50px;
+    display: flex;
+}
+#quantity{
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    width: 70px;
+    font-weight: normal;
+    border: 1px solid #ccc;
+}
+#btn-add-to-cart{
+    background-color: #3131ff;
+    font-size: 20px;
+    text-align: center;
+    height: 36px;
+    width: 350px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+}
+#btn-add-to-cart:hover{
+    background-color: white;
+    border: 1px solid #3131ff;
+    color: #3131ff;
+}
+/* btn-close */
+.btn-close{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    display: block;
+    font-weight: 20px;
+    font-weight: 900;
+}
+
+.chuyen{
+    cursor: pointer;
+    line-height: 95px;
+    margin: 0 20px;
+}
