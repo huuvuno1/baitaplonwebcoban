@@ -383,3 +383,85 @@ html, body{
     line-height: 95px;
     margin: 0 20px;
 }
+
+
+/* form cart */
+.form-cart{
+    border-radius: 5px;
+    height: 550px;
+}
+
+.product-name-just-added{
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f8f8f8;
+}
+.product-name-just-added span{
+    margin: 0 0 0 30px;
+}
+
+.content-cart{
+    padding: 40px 30px;
+}
+
+.content-cart .title-cart{
+    font-size: 23px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.row-title{
+    display: flex;
+}
+.title-view{
+    font-weight: bold;
+    color: black;
+}
+.view-product-selected{
+    margin: 20px 0px;
+    max-height: 250px;
+    overflow-y: scroll;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.view-row-product{
+    font-size: 15px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0 0 0;
+}
+.view-product-info{
+    width: 57%;
+    display: flex;
+}
+.view-product-info .view-img{
+    padding: 10px 15px 10px 0px;
+}
+.view-product-info .view-img img{
+    width: 120px;
+    max-height: 100px;
+}
+.view-info-name{
+    font-size: 14px;
+}
+.click-remove{
+    font-size: 14px;
+    padding: 10px 0 ;
+    color: grey;
+}
+.view-product-price{
+    width: 15%;
+}
+.view-product-quantity{
+    width: 15%;
+}
+
+.view-product-quantity input{
+    width: 70px;
+    height: 35px;
+}
+
+.view-product-money{
+    width: 15%;
+}

@@ -11,8 +11,7 @@
 </head>
 
 <body>
-
-
+    
     <section class="vitritrang">
         <div class="container">
             <ul>
@@ -43,7 +42,7 @@
                                 <div class="view-details" onclick="btnShowForm(1)" title="Xem nhanh">
                                     <img src="img/icon/kinhlup.png" alt="" class="icon">
                                 </div>
-                                <div class="add-to-cart" onclick="btnShowForm(2)" title="Giỏ hàng">
+                                <div class="add-to-cart" onclick="btnShowForm(2)" title="Thêm vào Thêm vào giỏ hàng">
                                     <img src="img/icon/cart.png" alt="" class="icon">
                                 </div>
                             </div>
@@ -552,8 +551,8 @@
         </div>
     </section>
     <div class="clear"></div>
-    <div class="show-form">
-        <div class="form-quick-view frame">
+    <div class="show-form" style="display: block;">
+        <div class="form-quick-view frame" style="display: none !important;">
             <a href="javascript:;" class="btn-close" onclick="btnClose(1)">x</a>
             <div class="flex-layout">
                 <div class="left-frame">
@@ -619,7 +618,7 @@
                             <input type="number" name="" id="quantity" min="1">
                         </div>
                         <div class="btn-add-to-cart">
-                            <button id="btn-add-to-cart">Cho vào giỏ hàng</button>
+                            <button id="btn-add-to-cart">Cho vào Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                 </div>
@@ -628,8 +627,107 @@
         </div>
         <div class="fade" onclick="btnClose(1)">
         </div>
-        <div class="form-cart frame">
-            <a href="javascript:;" class="btn-close" onclick="btnClose(2)">x</a>
+        <div class="form-cart frame" style="display: block !important;">
+            <a href="javascript:;" class="btn-close" onclick="btnClose(2)">〤</a>
+            <div class="product-name-just-added">
+                <span>Bạn đã thêm <a href="#">Acer Nitro 5 AN515 51 739L i7 7700HQ/8GB/1TB/2GB</a> vào giỏ hàng </span>
+            </div>
+            <div class="content-cart">
+                <div class="title-cart">
+                    Giỏ hàng của bạn
+                </div>
+                <div class="row-title">
+                    <div class="title-view view-product-info">
+                        Sản phẩm
+                    </div>
+                    <div class="title-view view-product-price">
+                        Giá
+                    </div>
+                    <div class="title-view view-product-quantity">
+                        Số lượng
+                    </div>
+                    <div class="title-view view-product-total-money">
+                        Tổng tiền
+                    </div>
+                </div>
+                <div class="view-product-selected">
+                    <div class="view-row-product">
+                        <div class="view-product-info">
+                            <div class="view-img">
+                                <img src="img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" alt="">
+                            </div>
+                            <div class="view-info">
+                                <div class="view-info-name text-2-line">
+                                    Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)
+                                </div>
+                                <div class="click-remove">
+                                    〤 Xóa
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-product-price">
+                            <span>9.000.000 ₫</span>
+                        </div>
+                        <div class="view-product-quantity">
+                            <input type="number" value="1">
+                        </div>
+                        <div class="view-product-total-money">
+                            d
+                        </div>
+                    </div>
+
+                    <div class="view-row-product">
+                        <div class="view-product-info">
+                            <div class="view-img">
+                                <img src="img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" alt="">
+                            </div>
+                            <div class="view-info">
+                                <div class="view-info-name text-2-line">
+                                    Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)
+                                </div>
+                                <div class="click-remove">
+                                    〤 Xóa
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-product-price">
+                          b 
+                        </div>
+                        <div class="view-product-quantity">
+                           c      
+                        </div>
+                        <div class="view-product-total-money">
+                            d
+                        </div>
+                    </div>
+                    <div class="view-row-product">
+                        <div class="view-product-info">
+                            <div class="view-img">
+                                <img src="img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" alt="">
+                            </div>
+                            <div class="view-info">
+                                <div class="view-info-name text-2-line">
+                                    Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)
+                                </div>
+                                <div class="click-remove">
+                                    〤 Xóa
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-product-price">
+                          b 
+                        </div>
+                        <div class="view-product-quantity">
+                           c      
+                        </div>
+                        <div class="view-product-total-money">
+                            d
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
         </div>
 
     </div>
