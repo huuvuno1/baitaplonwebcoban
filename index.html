@@ -660,19 +660,24 @@
                                 <div class="view-info-name text-2-line">
                                     Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)
                                 </div>
-                                <div class="click-remove">
+                                <span class="click-remove">
                                     〤 Xóa
-                                </div>
+                                </span>
                             </div>
                         </div>
                         <div class="view-product-price">
-                            <span>9.000.000 ₫</span>
+                            <span class="red">7.000.000 ₫</span>
                         </div>
                         <div class="view-product-quantity">
-                            <input type="number" value="1">
+                            <div class="cha">
+                                <span class="con" id="minus" onclick="minusQuantity(this)">–</span>
+                                <input type="text" value="1" onchange="sumOfMoney(this)">
+                                <span class="con" id="add" onclick="addQuantity(this)">+</span>
+                            </div>
+                            
                         </div>
                         <div class="view-product-total-money">
-                            d
+                            <span class="red">14.000.000</span>
                         </div>
                     </div>
 
@@ -685,21 +690,26 @@
                                 <div class="view-info-name text-2-line">
                                     Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)
                                 </div>
-                                <div class="click-remove">
+                                <span class="click-remove">
                                     〤 Xóa
-                                </div>
+                                </span>
                             </div>
                         </div>
                         <div class="view-product-price">
-                          b 
+                            <span class="red">9.000.000 ₫</span>
                         </div>
                         <div class="view-product-quantity">
-                           c      
+                            <div class="cha">
+                                <span class="con" id="minus" onclick="minusQuantity(this)">–</span>
+                                <input type="text" value="1" onchange="sumOfMoney(this)" id="aaa">
+                                <span class="con" id="add" onclick="addQuantity(this)">+</span>
+                            </div>
                         </div>
                         <div class="view-product-total-money">
-                            d
+                            <span class="red">18.000.000</span>
                         </div>
                     </div>
+
                     <div class="view-row-product">
                         <div class="view-product-info">
                             <div class="view-img">
@@ -709,25 +719,38 @@
                                 <div class="view-info-name text-2-line">
                                     Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)
                                 </div>
-                                <div class="click-remove">
+                                <span class="click-remove">
                                     〤 Xóa
-                                </div>
+                                </span>
                             </div>
                         </div>
                         <div class="view-product-price">
-                          b 
+                            <span class="red">8.000.000 ₫</span>
                         </div>
                         <div class="view-product-quantity">
-                           c      
+                            <div class="cha">
+                                <span class="con" id="minus" onclick="minusQuantity(this)">–</span>
+                                <input type="text" value="1" onchange="sumOfMoney(this)">
+                                <span class="con" id="add" onclick="addQuantity(this)">+</span>
+                            </div>
+                            
                         </div>
                         <div class="view-product-total-money">
-                            d
+                            <span class="red">8.000.000</span>
                         </div>
                     </div>
+                  
 
                 </div>
             </div>
-            
+            <div class="check-out">
+                <span>Tổng số thành tiền: </span>
+                <span class="red">
+                    19.240.000
+                </span>
+                <br style="margin: 15px;">
+                <button id="btn-add-to-cart">Tiến hành thanh toán</button>
+            </div>
         </div>
 
     </div>

@@ -89,3 +89,75 @@ function a()
         window.history.pushState('page2', 'Title', '/page1.php');
     }
 }
+
+// xử lí tăng giảm ô input
+function addQuantity(x)
+{
+    var input = x.parentNode.children[1];
+    var num = input.value;
+    if (isNaN(parseInt(num)))
+        num = 1;
+    else
+        num ++;
+    input.value = num;
+    // mai lam, ham ko nên để đây, de ben ngoai de con tai su dung
+    sumOfMoney(input);
+}
+
+function minusQuantity(x)
+{
+    var input = x.parentNode.children[1];
+    var num = input.value;
+    if (isNaN(parseInt(num)))
+        num = 1;
+    else
+        num --;
+    if (num <= 0)
+        num = 1;
+    input.value = num;
+    // mai lam, ham ko nên để đây, de ben ngoai de con tai su dung
+    sumOfMoney(input);
+}
+
+function sumOfMoney(x)
+{
+    if (isNaN(parseInt(x.value)) || x.value <= 0)
+    {
+        x.value = 1;
+        return;
+    }
+    var parent = x.parentNode.parentNode.parentNode;
+    var unitPrice = parent.children[1].children[0].innerHTML;
+    unitPrice = unitPrice.replaceAll('.', '');
+    unitPrice = unitPrice.replaceAll('₫', '');
+    unitPrice = parseInt(unitPrice);
+
+    var total = unitPrice * x.value;
+    parent.children[3].children[0].textContent = formatMoney(total);
+}
+
+function formatMoney(number)
+{
+    var numString = number.toString();
+    // 123456 -> 123.456
+    // không xử lý trường hợp số 0 đứng đầu vì ở đây ko thể đụng tới
+
+    var x = 0;
+    var temp = '';
+
+    for (var i = numString.length - 1; i >= 0; i--)
+    {
+        x ++;
+        temp += numString[i];
+        if (x == 3 && i != 0)
+        {
+            x = 0;
+            temp += '.';
+        }
+    }
+    var out = '';
+    for (var i = temp.length-1; i >= 0 ; i--)
+        out += temp[i];
+    out += ' ₫';
+    return out;
+}

@@ -209,7 +209,7 @@ html, body{
 }
 .frame{
     width: 900px;
-    height: 450px;
+    /* height: 450px; */
     position: absolute;
     background-color: white;
     z-index: 10000;
@@ -388,7 +388,7 @@ html, body{
 /* form cart */
 .form-cart{
     border-radius: 5px;
-    height: 550px;
+    /* height: 550px; */
 }
 
 .product-name-just-added{
@@ -402,7 +402,7 @@ html, body{
 }
 
 .content-cart{
-    padding: 40px 30px;
+    padding: 20px 30px 0px 30px;
 }
 
 .content-cart .title-cart{
@@ -458,10 +458,61 @@ html, body{
 }
 
 .view-product-quantity input{
-    width: 70px;
+    width: 40px;
     height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.red{
+    color: red;
+    font-weight: bold;
 }
 
 .view-product-money{
     width: 15%;
+}
+
+.click-remove{
+    cursor: pointer;
+}
+.check-out{
+    padding-right: 30px;
+    display: block;
+    text-align: right;
+    margin-bottom: 30px;
+}
+.check-out>span{
+    font-size: 16px;
+}
+.check-out .red{
+    font-size: 18px;
+    
+}
+.check-out #btn-add-to-cart{
+    height: 45px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+/* css + - input */
+.cha{
+    position: relative;
+    width: 102px;
+    height: 37px;
+}
+.con{
+    position: absolute;
+    font-size: 20px;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    line-height: 35px;
+}
+#add{
+    right: 12px;
+}
+#minus{
+    left: 12px;
 }
