@@ -13,6 +13,8 @@ function btnShowForm(form) {
     else {
         x.firstElementChild.style.display = "none";
         x.lastElementChild.style.display = "block";
+        // tạm để đây
+        tongTienGioHang();
     }
 }
 
@@ -22,6 +24,8 @@ function showImage(img) {
 }
 
 // hơi thừa để sau dùng ajax xử lí lại
+// phải dùng onload vì nếu ảnh chưa load kịp nó sẽ tải luôn
+// dẫn đến ảnh không được hiển thị
 window.onload = function hideImg() {
     var a = document.getElementsByClassName('small-img');
 
@@ -127,6 +131,7 @@ function sumOfMoney(x)
 
     var total = unitPrice * x.value;
     parent.children[3].children[0].textContent = formatMoney(total);
+    tongTienGioHang();
 }
 
 function formatMoney(number)
@@ -167,4 +172,27 @@ function checkInput(x)
 function addToCart()
 {
     btnShowForm(2);
+}
+
+function removeProduct(x)
+{ 
+    var row = x.parentNode.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+    tongTienGioHang();
+}
+
+function tongTienGioHang()
+{
+    var row = document.getElementsByClassName("view-row-product");
+    var sum = 0;
+    for (var i = 0; i < row.length; i++)
+    {
+        var money = row[i].getElementsByClassName("red")[1].innerHTML;
+        // chuyen 14.000.000 đ về 14000000
+        money = money.replaceAll('.', '');
+        money = money.replaceAll('₫', '');
+        money = parseInt(money);
+        sum += money;
+    }
+    document.getElementById("tong-tien").innerHTML = formatMoney(sum);
 }
