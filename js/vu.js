@@ -99,9 +99,8 @@ function addQuantity(x)
         num = 1;
     else
         num ++;
+    // nếu là NaN (not number) thì nó sẽ insert 1
     input.value = num;
-    // mai lam, ham ko nên để đây, de ben ngoai de con tai su dung
-    sumOfMoney(input);
 }
 
 function minusQuantity(x)
@@ -115,17 +114,11 @@ function minusQuantity(x)
     if (num <= 0)
         num = 1;
     input.value = num;
-    // mai lam, ham ko nên để đây, de ben ngoai de con tai su dung
-    sumOfMoney(input);
 }
 
 function sumOfMoney(x)
 {
-    if (isNaN(parseInt(x.value)) || x.value <= 0)
-    {
-        x.value = 1;
-        return;
-    }
+    checkInput(x);
     var parent = x.parentNode.parentNode.parentNode;
     var unitPrice = parent.children[1].children[0].innerHTML;
     unitPrice = unitPrice.replaceAll('.', '');
@@ -160,4 +153,18 @@ function formatMoney(number)
         out += temp[i];
     out += ' ₫';
     return out;
+}
+
+function checkInput(x)
+{
+    var num = parseInt(x.value);
+    if (isNaN(num) || num <= 0)
+        num = 1;
+    x.value = num;
+}
+
+// viết tạm
+function addToCart()
+{
+    btnShowForm(2);
 }

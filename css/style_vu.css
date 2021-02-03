@@ -347,7 +347,7 @@ html, body{
     background-color: #3131ff;
     font-size: 20px;
     text-align: center;
-    height: 36px;
+    height: 37px;
     width: 350px;
     border: 0;
     cursor: pointer;
@@ -502,6 +502,7 @@ html, body{
     width: 102px;
     height: 37px;
 }
+
 .con{
     position: absolute;
     font-size: 20px;
@@ -510,9 +511,67 @@ html, body{
     cursor: pointer;
     line-height: 35px;
 }
-#add{
+.add{
     right: 12px;
 }
-#minus{
+.minus{
     left: 12px;
 }
+
+.line37{
+    height: 37px;
+    line-height: 37px;
+}
+
+/* tăng giảm input mua hang */
+.muahang input{
+    border: 1px solid #ddd;
+    height: 35px;
+    width: 42px;
+    text-align: center;
+    padding: 0 30px;
+}
+
+
+/* pagination */
+.pagination{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+.pagination span{
+    text-align: center;
+    display: block;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    background-color: #ecede7;
+}
+.pagination a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.pagination span:hover{
+    background-color: #2775d2;
+    color: white;
+    font-weight: bold;
+}
+/* set background mũi tên cho nó */
+.arrow-left{
+    background-image: url(/img/icon/click-left-gray.png);
+}
+.arrow-left:hover{
+    background-image: url(/img/icon/click-left.png);
+    background-size: 100%;
+}
+.arrow-right{
+    background-image: url(/img/icon/click-right-gray.png);
+    
+}
+.arrow-right:hover{
+    background-image: url(/img/icon/click-right.png);
+    background-size: 100%;
+}
+
