@@ -196,3 +196,9 @@ function tongTienGioHang()
     }
     document.getElementById("tong-tien").innerHTML = formatMoney(sum);
 }
+
+function showSort()
+{
+    var x = document.getElementsByClassName('sort-type')[0];
+    x.style.display = (x.style.display == 'block') ? 'none' : 'block';
+}
