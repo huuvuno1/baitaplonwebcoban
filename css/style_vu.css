@@ -670,34 +670,6 @@ html, body{
     float: right;
 }
 
-/* reposive cho trang danh muc */
-
-.left-container .product{
-    padding: 10px !important;
-    width: 219px !important;
-}
-
-.left-container .product-thumnail{
-    height: 120px;
-}
-
-.left-container .khungduoi{
-    height: 160px !important;
-}
-.left-container .text-2-line{
-    height: 80px;
-}
-
-.left-container .khungduoi{
-    height: 160px;
-}
-.left-container .view-details{
-    width: 40px;
-}
-.left-container .add-to-cart
-{
-    width: 40px;
-}
 
 .right-container{
     width: 25%;
