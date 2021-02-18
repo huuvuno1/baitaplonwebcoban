@@ -113,24 +113,51 @@ header .search input{
 header .account{
     width: 20%;
     height: 94px;
-    background-color: green;
     line-height: 94px;
     display: block;
     text-align: right;
     padding-right: 20px;
+    display: flex;
+    justify-content: right;
 }
 
 header .account img{
+    height: 30px;
+    margin-top: 30px;
     width: 30px;
-    margin-left: 20px;
+    margin-right: 10px;
 }
+
+header .account span{
+    color: white;
+}
+
 header .cart{
     width: 7%;
     height: 94px;
-    background-color: rgb(148, 67, 224);
+    line-height: 115px;
+    position: relative;
+    display: flex;
+    justify-content: right;
 }
 
-header .account
+header .cart img{
+    width: 30px;
+    height: 30px;   
+    margin-top: 30px;
+    margin-right: 5px; 
+}
+
+header .cart span{
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid brown;
+    line-height: 1;
+    width: 20px;
+    top: 20px;
+    background-color: orangered;
+    text-align: center;
+}
 /* Hết header */
 
 
