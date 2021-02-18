@@ -65,6 +65,8 @@ header .category ul{
     height: 0;
     overflow: hidden;
     transition: height 1s;
+    position: relative;
+    bottom: 40px;
 }
 
 header .category ul li{

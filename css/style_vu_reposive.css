@@ -1,6 +1,5 @@
 @media screen and (min-width: 1260px){
     /* reposive cho trang danh muc */
-
     .left-container .product{
         padding: 10px !important;
         width: 219px !important;
@@ -33,6 +32,14 @@
     /* body{
         background-color: red;
     } */
+
+    /* header */
+    header .category {
+        width: 25%;
+    }
+
+    
+    /* end header */
     .container{
         width: 1000px;
     }
@@ -105,6 +112,20 @@
     /* body{
         background-color: green;
     } */
+
+    header .account {
+        display: none;
+    }
+    header .category{
+        width: 40%;
+    }
+    #timkiem {
+        width: 55%;
+    }
+    #btn-search {
+        width: 35%;
+    }
+
     .container{
         width: 675px;
     }
@@ -135,12 +156,44 @@
     .right-title-container{
         background-color: #f8f8f8;
     }
+    .footer-contact {
+        height: auto;
+    }
+    .footer-contact .container{
+        display: block;
+        height: auto;
+    }
+    .footer-contact p{
+        margin: 0;
+    }
     
 }
 @media screen and (max-width: 768px) and (min-width: 450px) {
     /* body{
         
     } */
+    header .account {
+        display: none;
+    }
+
+    header .category {
+        display: none;
+    }
+    header .search {
+        width: 70%;
+    }
+    #btn-search{
+        width: 35%;
+    }
+
+    #timkiem {
+        width: 55%;
+    }
+
+    .logo img {
+        margin-top: 30px;
+    }
+
     .container{
         width: 400px;
     }
@@ -175,12 +228,44 @@
         width: 400px !important;
         padding-right: 0 !important;
     }
+    .footer-contact {
+        height: auto;
+    }
+    .footer-contact .container{
+        display: block;
+        height: auto;
+    }
+    .footer-contact p{
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 450px) {
     /* body{
         background-color: lightcoral;
     } */
+    header .account {
+        display: none;
+    }
+
+    header .category {
+        display: none;
+    }
+    header .search {
+        width: 70%;
+    }
+    #btn-search{
+        width: 35%;
+    }
+
+    #timkiem {
+        width: 55%;
+    }
+
+    .logo img {
+        margin-top: 30px;
+    }
+
     .container{
         width: 350px;
     }
@@ -212,5 +297,15 @@
     }
     .show-option-selection, .show-form{
         display: none !important;
+    }
+    .footer-contact {
+        height: auto;
+    }
+    .footer-contact .container{
+        display: block;
+        height: auto;
+    }
+    .footer-contact p{
+        margin: 0;
     }
 }
