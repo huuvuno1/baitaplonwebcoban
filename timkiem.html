@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <div class="container">
             <div class="logo">
@@ -22,11 +22,21 @@
                     <img src="img/icon/le.png" alt="">
                 </h3>
                 <ul id="lmenu">
-                    <a href=""><li>Tất cả sản phẩm</li></a>
-                    <a href=""><li>Laptop</li></a>
-                    <a href=""><li>Phụ kiện</li></a>
-                    <a href=""><li>Sản phẩm mới</li></a>
-                    <a href=""><li>Sản phẩm khuyến mãi</li></a>
+                    <a href="">
+                        <li>Tất cả sản phẩm</li>
+                    </a>
+                    <a href="">
+                        <li>Laptop</li>
+                    </a>
+                    <a href="">
+                        <li>Phụ kiện</li>
+                    </a>
+                    <a href="">
+                        <li>Sản phẩm mới</li>
+                    </a>
+                    <a href="">
+                        <li>Sản phẩm khuyến mãi</li>
+                    </a>
                 </ul>
             </div>
             <div class="search">
@@ -36,8 +46,9 @@
                 </form>
             </div>
             <div class="account">
-                <img src="img/icon/user.png" alt="">
-                    <span>Tên tài khoản</span>
+                <a href="/login"><img src="img/icon/user.png" alt=""></a>
+                <a href="/login"><span>Đăng nhập</span></a>
+                <!-- <a href="/login" ><span id="logout">Logout</span></a> -->
             </div>
             <div class="cart">
                 <span>4</span>
@@ -45,6 +56,8 @@
             </div>
         </div>
     </header>
+    <!-- fdkdjsfksdjfkds -->
+
 
     <section class="vitritrang">
         <div class="container">
@@ -599,15 +612,23 @@
                         </div>
                         <!-- cứ cho chay for hết list ảnh ra, js sẽ cho hiển thị 3 cái đầu -->
                         <div id="PIC">
-                        <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="0">
-                        <img src="img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="1">
-                        <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="2">
-                        <img src="img/product/thiet-bi-deo-thuc-te-ao-sm-r323.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="3">
-                        <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="4">
-                        <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="5">
-                        <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="4">
-                        <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="5">
-                    </div>
+                            <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img"
+                                onclick="showImage(this)" num="0">
+                            <img src="img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" alt="Ảnh lỗi"
+                                class="small-img" onclick="showImage(this)" num="1">
+                            <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)"
+                                num="2">
+                            <img src="img/product/thiet-bi-deo-thuc-te-ao-sm-r323.jpg" alt="Ảnh lỗi" class="small-img"
+                                onclick="showImage(this)" num="3">
+                            <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)"
+                                num="4">
+                            <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img"
+                                onclick="showImage(this)" num="5">
+                            <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)"
+                                num="4">
+                            <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img"
+                                onclick="showImage(this)" num="5">
+                        </div>
                         <div class="chuyen" onclick="nextImg()">
                             <img src="img/icon/click-right.png" alt="">
                         </div>
@@ -650,9 +671,9 @@
 
                     <div class="muahang">
                         <div class="quantity cha">
-                                <span class="con minus" onclick="minusQuantity(this)">–</span>
-                                <input type="text" value="1" onchange="checkInput(this)">
-                                <span class="con add" onclick="addQuantity(this)">+</span>
+                            <span class="con minus" onclick="minusQuantity(this)">–</span>
+                            <input type="text" value="1" onchange="checkInput(this)">
+                            <span class="con add" onclick="addQuantity(this)">+</span>
                         </div>
                         <div class="btn-add-to-cart">
                             <button id="btn-add-to-cart" onclick="addToCart()">Cho vào Thêm vào giỏ hàng</button>
@@ -707,11 +728,13 @@
                         </div>
                         <div class="view-product-quantity">
                             <div class="cha">
-                                <span class="con minus" onclick="minusQuantity(this); sumOfMoney(this.parentNode.children[1]);">–</span>
+                                <span class="con minus"
+                                    onclick="minusQuantity(this); sumOfMoney(this.parentNode.children[1]);">–</span>
                                 <input type="text" value="1" onchange="sumOfMoney(this)">
-                                <span class="con add" onclick="addQuantity(this); sumOfMoney(this.parentNode.children[1]);">+</span>
+                                <span class="con add"
+                                    onclick="addQuantity(this); sumOfMoney(this.parentNode.children[1]);">+</span>
                             </div>
-                            
+
                         </div>
                         <div class="view-product-total-money">
                             <span class="red line37">7.000.000 ₫</span>
@@ -737,9 +760,11 @@
                         </div>
                         <div class="view-product-quantity">
                             <div class="cha">
-                                <span class="con minus" onclick="minusQuantity(this); sumOfMoney(this.parentNode.children[1]);">–</span>
+                                <span class="con minus"
+                                    onclick="minusQuantity(this); sumOfMoney(this.parentNode.children[1]);">–</span>
                                 <input type="text" value="1" onchange="sumOfMoney(this)" id="aaa">
-                                <span class="con add" onclick="addQuantity(this); sumOfMoney(this.parentNode.children[1]);">+</span>
+                                <span class="con add"
+                                    onclick="addQuantity(this); sumOfMoney(this.parentNode.children[1]);">+</span>
                             </div>
                         </div>
                         <div class="view-product-total-money">
@@ -766,17 +791,19 @@
                         </div>
                         <div class="view-product-quantity">
                             <div class="cha">
-                                <span class="con minus" onclick="minusQuantity(this); sumOfMoney(this.parentNode.children[1]);">–</span>
+                                <span class="con minus"
+                                    onclick="minusQuantity(this); sumOfMoney(this.parentNode.children[1]);">–</span>
                                 <input type="text" value="1" onchange="sumOfMoney(this)">
-                                <span class="con add" onclick="addQuantity(this); sumOfMoney(this.parentNode.children[1]);">+</span>
+                                <span class="con add"
+                                    onclick="addQuantity(this); sumOfMoney(this.parentNode.children[1]);">+</span>
                             </div>
-                            
+
                         </div>
                         <div class="view-product-total-money">
                             <span class="red line37">8.000.000</span>
                         </div>
                     </div>
-                  
+
 
                 </div>
             </div>
@@ -791,7 +818,7 @@
         </div>
 
     </div>
-    
+
     <div class="pagination">
         <a href=""><span class="arrow-left"></span></a>
         <a href=""><span>1</span></a>
@@ -800,6 +827,46 @@
         <a href=""><span class="arrow-right"></span></a>
     </div>
 
+    <div class="footer-contact">
+        <div class="container">
+            <div class="logo">
+                <img src="img/icon/logo.png" alt="">
+            </div>
+            <div class="note">
+                <p>
+                    Báo cáo Thương mại điện tử cho phép bạn phân tích
+                    hoạt động mua hàng trên trang web hoặc ứng dụng
+                    của mình. Bạn có thể xem thông tin về sản phẩm và
+                    giao dịch, giá trị đặt hàng trung bình, tỷ lệ chuyển
+                    đổi thương mại điện tử, thời gian mua hàng.
+                </p>
+            </div>
+            <div class="contact">
+                <p>
+                    0902068068 : Tư vấn bán hàng
+                </p>
+                <p>
+                    0902068068 : Khiếu nại, bảo hành
+                </p>
+                <p>Thời gian làm việc: 8h - 22h</p>
+                <p>Góp ý: nguyenhuuvuno1@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <h3>BÀI TẬP LỚN ASP.NET</h3>
+            <ul>
+                <li>NGUYỄN HỮU VŨ</li>
+                <li>ĐỖ MAI HOA</li>
+                <li>NGUYỄN VĂN LẬP</li>
+                <li>NGUYỄN TUẤN ANH</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>@BÀI TẬP LỚN ASP.NET LỚP THẦY TRẦN TIẾN DŨNG</p>
+        </div>
+    </div>
 </body>
 
 </html>

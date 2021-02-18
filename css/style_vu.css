@@ -12,6 +12,10 @@ html, body{
 header{
     height: 94px;
     background-color: #2775d2;
+    width: 100%;
+    position: fixed;
+    z-index: 100000000000;
+    top:0;
 }    
 
 header .container{
@@ -20,12 +24,12 @@ header .container{
     display: flex;
 }
 
-header .logo{
+.logo{
     width: 14%;
     height: 94px;
     
 }
-header .logo img{
+.logo img{
     max-height: 60px;
     margin-top: 15px;
     width: 90%;
@@ -147,22 +151,35 @@ header .cart img{
     margin-top: 30px;
     margin-right: 5px; 
 }
-
+header .account a{
+    text-decoration: none;
+}
+header .account a:hover span{
+    color: chartreuse;
+}
+#logout{
+    margin-left: 10px;
+}
+#logout:hover{
+    color: red;
+}
 header .cart span{
     position: absolute;
     border-radius: 50%;
-    border: 1px solid brown;
+    border: 1px solid rgb(243, 111, 63);
     line-height: 1;
     width: 20px;
     top: 20px;
     background-color: orangered;
     text-align: center;
+    color: white;
 }
 /* Hết header */
 
 
 .vitritrang{
     background-color: #f6f6f6;
+    margin-top: 94px;
 }
 
 .vitritrang ul li.tenvitri{
@@ -937,6 +954,66 @@ header .cart span{
     border-top: 1px solid #ccc;
     line-height: 30px;
 }
+
+
+/* footer */
+.footer-contact{
+    height: 175px;
+    background-color: #2775d2;
+}
+
+.footer-contact .container{
+    height: 175px;
+    display: flex;
+    color: white;
+    font-weight: normal;
+    font-size: 17px;
+}
+
+.footer-contact .logo img{
+    margin-top: 60px !important;
+}
+
+.footer-contact .note{
+    padding: 30px;
+    width: 70%;
+}
+.footer-contact .contact
+{
+    width: 30%;
+}
+
+/* footer 2 =)) */
+
+.footer{
+    background-color: #302f34;
+    height: 170px;
+    width: 100%;
+    padding-top: 20px;
+    color: white;
+}
+
+.footer h3{
+    margin: 0;
+}
+
+.footer ul{
+    display: block;
+}
+.footer li{
+    padding: 7px;
+    list-style: none;
+}
+.copyright{
+    text-align: center;
+    height: 70px;
+    background-color: #201f24;
+    line-height: 70px;
+}
+.copyright p{
+    margin: 0;
+}
+/* end footer */
 
 /* admin body */
 .main-container{
