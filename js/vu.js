@@ -1,12 +1,33 @@
+var showmenu = 0;
+function showMenu()
+{
+    
+    var x = document.getElementById('lmenu');
+    if (showmenu == 0)
+    {
+        x.style.height = "205px";   
+        showmenu = 1;
+    } 
+    else 
+    {
+        x.style.height = "0px";
+        showmenu = 0;
+    }
+    
+}
 
 function btnClose(form) {
     var x = document.getElementsByClassName("show-form")[0];
     x.style.display = "none";
 }
-function btnShowForm(form) {
+function btnShowForm(form, ID) {
     var x = document.getElementsByClassName("show-form")[0];
     x.style.display = "block";
     if (form == 1) {
+
+        // goi ajax
+
+
         x.firstElementChild.style.display = "block";
         x.lastElementChild.style.display = "none";
     }
@@ -137,7 +158,7 @@ function sumOfMoney(x)
 function formatMoney(number)
 {
     var numString = number.toString();
-    // 123456 -> 123.456
+    // 123456 -> 123,456
     // không xử lý trường hợp số 0 đứng đầu vì ở đây ko thể đụng tới
 
     var x = 0;
@@ -150,7 +171,7 @@ function formatMoney(number)
         if (x == 3 && i != 0)
         {
             x = 0;
-            temp += '.';
+            temp += ',';
         }
     }
     var out = '';
@@ -189,7 +210,7 @@ function tongTienGioHang()
     {
         var money = row[i].getElementsByClassName("red")[1].innerHTML;
         // chuyen 14.000.000 đ về 14000000
-        money = money.replaceAll('.', '');
+        money = money.replaceAll(',', '');
         money = money.replaceAll('₫', '');
         money = parseInt(money);
         sum += money;
