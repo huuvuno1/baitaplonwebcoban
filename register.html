@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_vu.css">
+    <link rel="stylesheet" href="css/style_vu_reposive.css">
+</head>
+<body>
+    <header  style="display: none;">
+        <div class="container">
+            <div class="logo">
+                <img src="img/icon/logo.png" alt="">
+            </div>
+            <div class="category">
+                <h3 onclick="showMenu()">Danh mục sản phẩm
+                    <img src="img/icon/le.png" alt="">
+                </h3>
+                <ul id="lmenu">
+                    <a href="">
+                        <li>Tất cả sản phẩm</li>
+                    </a>
+                    <a href="">
+                        <li>Laptop</li>
+                    </a>
+                    <a href="">
+                        <li>Phụ kiện</li>
+                    </a>
+                    <a href="">
+                        <li>Sản phẩm mới</li>
+                    </a>
+                    <a href="">
+                        <li>Sản phẩm khuyến mãi</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="/search">
+                    <input type="text" name="q" placeholder="Tìm kiếm sản phẩm" id="timkiem">
+                    <input type="submit" value="TÌM KIẾM" id="btn-search">
+                </form>
+            </div>
+            <div class="account">
+                <a href="/login"><img src="img/icon/user.png" alt=""></a>
+                <a href="/login"><span>Đăng nhập</span></a>
+                <!-- <a href="/login" ><span id="logout">Logout</span></a> -->
+            </div>
+            <div class="cart">
+                <span>4</span>
+                <img src="img/icon/bag.png" alt="">
+            </div>
+        </div>
+    </header>
+    <div style="margin-top: 94px; height: 1px;display: none;"></div>
+
+    <!-- fdkdjsfksdjfkds -->
+    <section class="vitritrang"  style="display: none;">
+        <div class="container">
+            <ul>
+                <li class="tenvitri"><a href=""> Trang chủ</a></li>
+                <li class="tenvitri"><a href="">></a></li>
+                <li class="tenvitri"><a href=""><span> Tìm kiếm</span></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="form-login">
+        <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+        <form action="/action?login" method="post">
+            <p><input type="text" placeholder="Họ tên" name="fullname"></p>
+            <p><input type="text" placeholder="Tên đăng nhập" name="username"></p>
+            <p><input type="text" placeholder="Email" name="Email"></p>
+            <p><input type="password" placeholder="Mật khẩu" name="password"></p>
+            <p><a href="#"><span>Quên mật khẩu</span></a></p>
+            <p><input type="submit" value="Đăng nhập" class="btn"></p>
+        </form>
+        <p><span>Đã có tài khoản ? Đăng nhập </span><a href="#" id="a_register">tại đây</a></p>
+        <div class="login-3rd">
+            <h3>Đăng nhập bằng Facebook hoặc Google</h3>
+            <div class="fb-gg">
+                <img src="img/icon/fb.png" alt="">
+                <img src="img/icon/gg.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
