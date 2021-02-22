@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style_vu.css">
+    <link rel="stylesheet" href="/css/style_vu_reposive.css">
+</head>
+<body style="overflow-y:hidden;">
+    <div class="container-checkout">
+        <form action="/action?login" method="post" class="form-login flex">
+        <div class="left-container-checkout">
+            <h1>Shop laptop & phụ kiện</h1>
+            <div class="ship">
+                <div class="info_customer">
+                    <div class="title">
+                        <span class="__ti">Thông tin nhận hàng</span>
+                        <div class="_login">
+                            <img src="/img/icon/user.png" alt="">
+                            <a href="/login"><span>Kiểm tra lại thông tin của bạn</span></a>
+                        </div>
+                    </div>
+                    <p><input type="text" placeholder="Tên đăng nhập (dùng để theo dõi đơn hàng của bạn)" name="username"></p>
+                    <p><input type="password" placeholder="Mật khẩu" name="password"></p>
+                    <p><input type="text" placeholder="Họ tên" name="fullname"></p>
+                    <p><input type="text" placeholder="Số điện thoại" name="phonenumber"></p>
+                    <p><input type="text" placeholder="Địa chỉ" name="address"></p>
+                    <p><textarea placeholder="Ghi chú cho đơn hàng này" name="note"></textarea></p>
+                </div>
+                <div class="transport_pay">
+                    <div class="transport">
+                        <span class="__ti">
+                            Vận chuyển
+                        </span>
+                        <div class="alert_green">
+                            Vui lòng chọn thông tin giao hàng
+                        </div>
+                    </div>
+                    <div class="pay">
+                        <span class="__ti">
+                            Thanh toán
+                        </span>
+                        <div class="COD">
+                            <p>
+                                <label for="cod">
+                                    <input type="radio" id="cod" name="_pay">
+                                    Thanh toán khi giao hàng (COD)
+                                </label>
+                            </p>
+                            <p>
+                                <label for="pay_online">
+                                    <input type="radio" id="pay_online" name="_pay">
+                                    Thanh toán online
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-container-checkout">
+            <div class="__ti">
+                Đơn hàng (1 sản phẩm)
+            </div>
+            <!-- <hr /> -->
+            <div class="list_order">
+                <div class="_product">
+                    <div class="img_quantity">
+                        <span>1</span>
+                        <img src="/img/product/10034218-5.jpg" alt="">
+                    </div>
+                    <div class="_name">
+                        Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017) 
+                    </div>
+                    <div class="_price">
+                        100,000,000đ
+                    </div>
+                </div>
+                <div class="_product">
+                    <div class="img_quantity">
+                        <span>1</span>
+                        <img src="/img/product/10034218-5.jpg" alt="">
+                    </div>
+                    <div class="_name">
+                        Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017) 
+                    </div>
+                    <div class="_price">
+                        110,000,000 D
+                    </div>
+                </div>
+                <div class="_product">
+                    <div class="img_quantity">
+                        <span>1</span>
+                        <img src="/img/product/10034218-5.jpg" alt="">
+                    </div>
+                    <div class="_name">
+                        Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017) 
+                    </div>
+                    <div class="_price">
+                        100000000
+                    </div>
+                </div>
+                <div class="_product">
+                    <div class="img_quantity">
+                        <span>1</span>
+                        <img src="/img/product/10034218-5.jpg" alt="">
+                    </div>
+                    <div class="_name">
+                        Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017) 
+                    </div>
+                    <div class="_price">
+                        100000000
+                    </div>
+                </div>
+            </div>
+            <div class="discount_code">
+                <input type="text" placeholder="Nhập mã giảm giá" id="code">
+                <input value="Áp dụng" type="button" id="btn_minus">
+            </div>
+
+            <div class="_total flex">
+                <div class="_left">
+                    <h4>Tổng cộng</h4>
+                    <p>
+                        < <a href="/cart"> Quay về giỏ hàng</a>
+                    </p>
+                </div>
+                <div class="_right">
+                    <h4 id="_total"></h4>
+                    <input value="ĐẶT HÀNG" type="button" id="btnOrder">
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+    <script src="/js/vu.js"></script>
+    <script src="/js/checkout.js"></script>
+    
+</body>
+</html>

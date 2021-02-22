@@ -12,22 +12,7 @@
 
 <body>
 
-    
 
-
-    <div>
-        <img src="img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" alt="" style="width: 50px;">
-        
-    <button type="button" onclick="del(this)"> xoa</button>
-    </div>
-    <script>
-        function del(x)
-        {
-            var parent = x.parentNode;
-            var p = parent.parentNode;
-            p.removeChild(parent);
-        }
-    </script>
     <section class="navbar-admin">
         <div class="left-nav">
             <img src="img/icon/admin.png" alt="">
@@ -40,18 +25,15 @@
                 <!-- <span id="name-admin">Nguyễn Hữu Vũ</span> -->
                 <ul class="ul-boss">
                     <li id="name-admin">Nguyễn Hữu Vũ</li>
-                    <li>
+                    <li id="menu_acc"> 
+                        <!-- da them id menu-acc -->
                         <ul class="option-x">
-                            <a href="">
-                                <li>
-                                    Profile
-                                </li>
-                            </a>
-                            <a href="">
-                                <li>
-                                    Đăng xuất
-                                </li>
-                            </a>
+                            <li>
+                                <a href="">Profile</a>
+                            </li>
+                            <li>
+                                <a href="/logout">Đăng xuất</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -74,49 +56,50 @@
                     <a href="javascript:;" class="btn-close" onclick="btnClose(1)">x</a>
                     <p class="title-p">Nhập thông tin sản phẩm</p>
                     <form action="">
-                    <table id="table-add">
-                        <tr>
-                            <td width="120px">Tên sản phẩm</td>
-                            <td width="600px"><input type="text" id="name" class="input-add"></td>
-                        </tr>
-                        <tr>
-                            <td>Giá</td>
-                            <td><input type="text" id="name" class="input-add"></td>
-                        </tr>
-                        <tr>
-                            <td>Số Lượng</td>
-                            <td><input type="text" id="name" class="input-add"></td>
-                        </tr>
-                        <tr>
-                            <td>Hình Ảnh</td>
-                            <td id="image_sss">
-                                <button onclick="addFileImage()" type="button"
-                                    style="background-color: chartreuse; cursor: pointer; margin-bottom: 3px;">Thêm ảnh
-                                    nữa</button><br>
-                                <input type="file" class="add-img" class="input-add">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mức Giảm Giá</td>
-                            <td><input type="text" id="name" class="input-add"></td>
-                        </tr>
-                        <tr>
-                            <td>Mô tả ngắn</td>
-                            <td><textarea class="input-add"></textarea></td>
-                        </tr>
-                        <tr>
-                            <td>URL Sản Phẩm</td>
-                            <td><input type="text" id="name" class="input-add"></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="text-align: right;">
-                                <button id="save" type="reset">Reset</button>
-                                <button id="save">Lưu</button>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
+                        <table id="table-add">
+                            <tr>
+                                <td width="120px">Tên sản phẩm</td>
+                                <td width="600px"><input type="text" id="name" class="input-add"></td>
+                            </tr>
+                            <tr>
+                                <td>Giá</td>
+                                <td><input type="text" id="name" class="input-add"></td>
+                            </tr>
+                            <tr>
+                                <td>Số Lượng</td>
+                                <td><input type="text" id="name" class="input-add"></td>
+                            </tr>
+                            <tr>
+                                <td>Hình Ảnh</td>
+                                <td id="image_sss">
+                                    <button onclick="addFileImage()" type="button"
+                                        style="background-color: chartreuse; cursor: pointer; margin-bottom: 3px;">Thêm
+                                        ảnh
+                                        nữa</button><br>
+                                    <input type="file" class="add-img" class="input-add">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mức Giảm Giá</td>
+                                <td><input type="text" id="name" class="input-add"></td>
+                            </tr>
+                            <tr>
+                                <td>Mô tả ngắn</td>
+                                <td><textarea class="input-add"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>URL Sản Phẩm</td>
+                                <td><input type="text" id="name" class="input-add"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="text-align: right;">
+                                    <button id="save" type="reset">Reset</button>
+                                    <button id="save">Lưu</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
 
                 </div>
                 <div class="fade" onclick="btnClose(1)">
@@ -159,55 +142,55 @@
             <a href="javascript:;" class="btn-close" onclick="btnClose(1)">x</a>
             <p class="title-p">Sửa thông thông tin sản phẩm</p>
             <form action="">
-            <table id="table-add">
-                <tr>
-                    <td width="120px">Tên sản phẩm</td>
-                    <td width="600px"><input type="text" id="name" class="input-add"></td>
-                </tr>
-                <tr>
-                    <td>Giá</td>
-                    <td><input type="text" id="name" class="input-add"></td>
-                </tr>
-                <tr>
-                    <td>Số Lượng</td>
-                    <td><input type="text" id="name" class="input-add"></td>
-                </tr>
-                <tr>
-                    <td>Hình Ảnh</td>
-                    <td id="image_sss">
-                        <button onclick="addFileImage()" type="button"
-                            style="background-color: chartreuse; cursor: pointer; margin-bottom: 3px;">Thêm ảnh
-                            nữa</button><br>
-                        <input type="file" class="add-img" class="input-add">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Mức Giảm Giá</td>
-                    <td><input type="text" id="name" class="input-add"></td>
-                </tr>
-                <tr>
-                    <td>Mô tả ngắn</td>
-                    <td><textarea class="input-add"></textarea></td>
-                </tr>
-                <tr>
-                    <td>URL Sản Phẩm</td>
-                    <td><input type="text" id="name" class="input-add"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align: right;">
-                        <button id="save" type="reset">Reset</button>
-                        <button id="save">Lưu</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
+                <table id="table-add">
+                    <tr>
+                        <td width="120px">Tên sản phẩm</td>
+                        <td width="600px"><input type="text" id="name" class="input-add"></td>
+                    </tr>
+                    <tr>
+                        <td>Giá</td>
+                        <td><input type="text" id="name" class="input-add"></td>
+                    </tr>
+                    <tr>
+                        <td>Số Lượng</td>
+                        <td><input type="text" id="name" class="input-add"></td>
+                    </tr>
+                    <tr>
+                        <td>Hình Ảnh</td>
+                        <td id="image_sss">
+                            <button onclick="addFileImage()" type="button"
+                                style="background-color: chartreuse; cursor: pointer; margin-bottom: 3px;">Thêm ảnh
+                                nữa</button><br>
+                            <input type="file" class="add-img" class="input-add">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mức Giảm Giá</td>
+                        <td><input type="text" id="name" class="input-add"></td>
+                    </tr>
+                    <tr>
+                        <td>Mô tả ngắn</td>
+                        <td><textarea class="input-add"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>URL Sản Phẩm</td>
+                        <td><input type="text" id="name" class="input-add"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: right;">
+                            <button id="save" type="reset">Reset</button>
+                            <button id="save">Lưu</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
 
         </div>
         <div class="fade" onclick="btnClose(1)">
         </div>
     </div>
-    
+
     <script src="js/admin_vu.js"></script>
     <script src="js/vu.js"></script>
 </body>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style_vu.css">
+    <link rel="stylesheet" href="/css/style_vu_reposive.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/icon/logo.png" alt="">
+            </div>
+            <div class="category">
+                <h3 onclick="showMenu()">Danh mục sản phẩm
+                    <img src="img/icon/le.png" alt="">
+                </h3>
+                <ul id="lmenu">
+                    <a href="">
+                        <li>Tất cả sản phẩm</li>
+                    </a>
+                    <a href="">
+                        <li>Laptop</li>
+                    </a>
+                    <a href="">
+                        <li>Phụ kiện</li>
+                    </a>
+                    <a href="">
+                        <li>Sản phẩm mới</li>
+                    </a>
+                    <a href="">
+                        <li>Sản phẩm khuyến mãi</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="/search">
+                    <input type="text" name="q" placeholder="Tìm kiếm sản phẩm" id="timkiem">
+                    <input type="submit" value="TÌM KIẾM" id="btn-search">
+                </form>
+            </div>
+            <div class="account">
+                <a href="/login"><img src="img/icon/user.png" alt=""></a>
+                <a href="/login"><span>Đăng nhập</span></a>
+                <!-- <a href="/login" ><span id="logout">Logout</span></a> -->
+            </div>
+            <div class="cart">
+                <span>4</span>
+                <img src="img/icon/bag.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- fdkdjsfksdjfkds -->
+    <div style="margin-top: 94px; height: 1px;"></div>
+
+    <div class="container_cart">
+        <div class="form-cart frame">
+            <div class="content-cart">
+                <div class="title-cart">
+                    Giỏ hàng của bạn
+                </div>
+                <div class="row-title">
+                    <div class="title-view view-product-info">
+                        Sản phẩm
+                    </div>
+                    <div class="title-view view-product-price">
+                        Giá
+                    </div>
+                    <div class="title-view view-product-quantity">
+                        Số lượng
+                    </div>
+                    <div class="title-view view-product-total-money">
+                        Tổng tiền
+                    </div>
+                </div>
+                <div class="view-product-selected" style="max-height: none;">
+                    <div class="view-row-product">
+                        <div class="view-product-info">
+                            <div class="view-img">
+                                <img src="img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" alt="">
+                            </div>
+                            <div class="view-info">
+                                <div class="view-info-name text-2-line">
+                                    Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)
+                                </div>
+                                <span class="click-remove" onclick="removeProduct(this)">
+                                    〤 Xóa
+                                </span>
+                            </div>
+                        </div>
+                        <div class="view-product-price">
+                            <span class="red line37">7.000.000 ₫</span>
+                        </div>
+                        <div class="view-product-quantity">
+                            <div class="cha">
+                                <span class="con minus"
+                                    onclick="minusQuantity(this); sumOfMoney(this.parentNode.children[1]);">–</span>
+                                <input type="text" value="1" onchange="sumOfMoney(this)">
+                                <span class="con add"
+                                    onclick="addQuantity(this); sumOfMoney(this.parentNode.children[1]);">+</span>
+                            </div>
+
+                        </div>
+                        <div class="view-product-total-money">
+                            <span class="red line37">7.000.000 ₫</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="check-out">
+                <span>Tổng số thành tiền: </span>
+                <span class="red" id="tong-tien">
+                    19.240.000
+                </span>
+                <br style="margin: 15px;">
+                <button id="btn-add-to-cart">Tiến hành thanh toán</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-contact">
+        <div class="container">
+            <div class="logo">
+                <img src="img/icon/logo.png" alt="">
+            </div>
+            <div class="note">
+                <p>
+                    Báo cáo Thương mại điện tử cho phép bạn phân tích
+                    hoạt động mua hàng trên trang web hoặc ứng dụng
+                    của mình. Bạn có thể xem thông tin về sản phẩm và
+                    giao dịch, giá trị đặt hàng trung bình, tỷ lệ chuyển
+                    đổi thương mại điện tử, thời gian mua hàng.
+                </p>
+            </div>
+            <div class="contact">
+                <p>
+                    0123456789 : Tư vấn bán hàng
+                </p>
+                <p>
+                    0902068068 : Khiếu nại, bảo hành
+                </p>
+                <p>Thời gian làm việc: 8h - 22h</p>
+                <p>Góp ý: nguyenhuuvuno1@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <h3>BÀI TẬP LỚN ASP.NET</h3>
+            <ul>
+                <li>NGUYỄN HỮU VŨ</li>
+                <li>ĐỖ MAI HOA</li>
+                <li>NGUYỄN VĂN LẬP</li>
+                <li>NGUYỄN TUẤN ANH</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>@BÀI TẬP LỚN ASP.NET LỚP THẦY TRẦN TIẾN DŨNG</p>
+        </div>
+    </div>
+    <script src="/js/vu.js"></script>
+</body>
+
+</html>
