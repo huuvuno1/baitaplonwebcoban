@@ -68,13 +68,37 @@
 
     <div class="form-login">
         <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
-        <form action="/action?login" method="post">
-            <p><input type="text" placeholder="Họ tên" name="fullname"></p>
-            <p><input type="text" placeholder="Tên đăng nhập" name="username"></p>
-            <p><input type="text" placeholder="Email" name="Email"></p>
-            <p><input type="password" placeholder="Mật khẩu" name="password"></p>
-            <p><a href="#"><span>Quên mật khẩu</span></a></p>
-            <p><input type="submit" value="Đăng nhập" class="btn"></p>
+        <form action="/register" method="post" id="__form">
+            
+            <p>
+                <span id="fullname_warn" runat="server"></span>
+                <input type="text" placeholder="Họ tên" name="fullname" id="fullname">
+            </p>
+
+            <p>
+                <span id="username_warn" runat="server"></span>
+                <input type="text" placeholder="Tên đăng nhập" name="username" id="username">
+            </p>
+
+            <p>
+                 <span id="phonenumber_warn" runat="server"></span> 
+                <input type="text" placeholder="Số điện thoại" name="phonenumber" id="phonenumber">
+            </p>
+
+            <p>
+                <span id="password_warn" runat="server"></span>
+                <input type="password" placeholder="Mật khẩu" name="password" id="password">
+            </p>
+
+            <p>
+                <span id="repassword_warn" runat="server"></span>
+                <input type="password" placeholder="Mật khẩu" name="repassword" id="repassword">
+            </p>
+
+            <p>
+                <a href="#"><span>Quên mật khẩu</span></a>
+            </p>
+            <p><input type="button" value="Đăng ký" class="btn" id="btn-login"></p>
         </form>
         <p><span>Đã có tài khoản ? Đăng nhập </span><a href="#" id="a_register">tại đây</a></p>
         <div class="login-3rd">
@@ -85,5 +109,73 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('btn-login').addEventListener('click', function(){
+            let fullname = document.getElementById('fullname').value;
+            let username = document.getElementById('username').value;
+            let phonenumber = document.getElementById('phonenumber').value;
+            let password = document.getElementById('password').value;
+            let repassword = document.getElementById('repassword').value;
+
+            let username_warn = document.getElementById('username_warn');
+            let fullname_warn = document.getElementById('fullname_warn')
+            let phonenumber_warn = document.getElementById('phonenumber_warn');
+            let password_warn = document.getElementById('password_warn');
+            let repassword_warn = document.getElementById('repassword_warn');
+            var correct = true;
+
+            if (fullname.length <= 4)
+            {
+                correct = false;
+                fullname_warn.textContent = "* Nhập tên đầy đủ";
+            }
+            else
+                fullname_warn.textContent = "";
+
+            if (username.length <5)
+            {
+                correct = false;
+                username_warn.textContent = "* Tên đăng nhập chứa ít nhất 5 ký tự";
+            }
+            else
+                username_warn.textContent = "";
+
+            /*
+                regex: ^0: Bắt đầu từ số 0
+                       $: Kết thúc 
+                       [abc] khớp với 1 trong các ký tự
+                       \d: Tương đương với [0-9] -> khớp với số từ 0-> 9
+                       {8} lặp lại 8 lần với ký tự đứng trước nó
+            */
+            if (phonenumber.match(/^0[23789]\d{8}$/g) == null) 
+            {
+                correct = false;
+                phonenumber_warn.textContent = "* Không chứa ký tự, sử dụng 1 trong các đầu số 02, 03, 07, 08, 09, có độ dài là 10 chữ số";
+            }
+            else
+                phonenumber_warn.textContent = "";
+
+            if (password.length < 5)
+            {
+                correct = false;
+                password_warn.textContent = "* Mật khẩu có ít nhất 5 ký tự";
+            }
+            else
+                password_warn.textContent = "";
+
+            if (repassword != password)
+            {
+                repassword_warn.textContent = "* Mật khẩu không khớp";
+                correct = false;
+            }
+            else
+                repassword_warn.textContent = "";
+
+            if (correct)
+                document.getElementById('__form').submit();
+        });
+
+    </script>
 </body>
 </html>

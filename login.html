@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="css/style_vu.css">
     <link rel="stylesheet" href="css/style_vu_reposive.css">
 </head>
+
 <body>
-    <header  style="display: none;">
+    <header style="display: none;">
         <div class="container">
             <div class="logo">
                 <img src="img/icon/logo.png" alt="">
@@ -56,7 +58,7 @@
     <div style="margin-top: 94px; height: 1px;display: none;"></div>
 
     <!-- fdkdjsfksdjfkds -->
-    <section class="vitritrang"  style="display: none;">
+    <section class="vitritrang" style="display: none;">
         <div class="container">
             <ul>
                 <li class="tenvitri"><a href=""> Trang chủ</a></li>
@@ -66,15 +68,36 @@
         </div>
     </section>
 
+    <!-- Bắt đầu maintain -->
     <div class="form-login">
         <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
-        <form action="/action?login" method="post">
-            <p><input type="text" placeholder="Tên đăng nhập" name="username"></p>
-            <p><input type="password" placeholder="Mật khẩu" name="password"></p>
+        <!-- <form action="/action?login" method="post">
+            <p>
+                Tên đăng nhập hoặc mật khẩu không hợp lệ
+            </p>
+            <p><input type="text" placeholder="Tên đăng nhập" name="username" id="username"></p>
+            <p><input type="password" placeholder="Mật khẩu" name="password" id="password"></p>
             <p><a href="#"><span>Quên mật khẩu</span></a></p>
-            <p><input type="submit" value="Đăng nhập" class="btn"></p>
+            <p><input type="button" value="Đăng nhập" class="btn" id="btn-login"></p>
             <p><span>Chưa có tài khoản đăng ký </span><a href="#" id="a_register">tại đây</a></p>
+        </form> -->
+
+        <form action="/login" method="post" id="__form">
+            <span class="validate">Tên tài khoản và mật khẩu phải có ít nhất 5 chữ số</span>
+            <p>
+                <% if ("false".Equals(Request.QueryString.Get("msg"))) { %>
+                    <span id="msg" runat="server" class="validate">Tài khoản hoặc mật khẩu sai</span>
+                    <% } %>
+                        <input oninput="changeTypeButtonLogin()" type="text" placeholder="Tên đăng nhập" name="username"
+                            id="username">
+            </p>
+            <p><input oninput="changeTypeButtonLogin()" type="password" placeholder="Mật khẩu" name="password" id="password"></p>
+            <p><a href="#"><span>Quên mật khẩu</span></a></p>
+            <p><input type="button" value="Đăng nhập" id="btn-click" class="btn"></p>
+            <p><span style="display:inline">Chưa có tài khoản đăng ký </span><a href="/register" id="a_register">tại
+                    đây</a></p>
         </form>
+
         <div class="login-3rd">
             <h3>Đăng nhập bằng Facebook hoặc Google</h3>
             <div class="fb-gg">
@@ -83,5 +106,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('btn-click').addEventListener('click', function () {
+            let username = document.getElementById('username');
+            let password = document.getElementById('password');
+
+            if (username.value.length < 5 || password.value.length < 5) {
+                document.getElementsByClassName("validate")[0].style.display = 'block';
+            }
+            else
+                document.getElementById('__form').submit();
+        });
+
+        function changeTypeButtonLogin() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            let btn = document.getElementById('btn-click');
+            if (username.length >= 5 && password.length >= 5)
+                btn.setAttribute('type', 'submit');
+            else
+                btn.setAttribute('type', 'button')
+        }
+    </script>
 </body>
+
 </html>

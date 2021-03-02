@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="nhap xau" name="" id="xau" oninput="gen()"><br>
+    <input type="text" placeholder="ket qua" name="" id="ketqua">
+    <select name="" id="">
+        <option value=""></option>
+    </select>
+
+    <script>
+        function gen()
+        {
+            var text = document.getElementById('xau').value;
+            var kq = text.replace(/[áạãảàâấậẩẫầăắặẵẳ]/g, 'a');
+            kq = kq.replace(/[êếễểệẽẻẹéè]/g, 'e');
+            kq = kq.replace(/[ìỉĩịí]/g, 'i');
+            kq = kq.replace(/[ỏòõọóôốồỗộốơớỡợở]/g, 'o');
+            kq = kq.replace(/[ủụũúùưứừựữ]/g, 'u');
+            kq = kq.replace(/ỳýỵỹỷ/g, 'y')
+            kq = kq.replace(/[|\/()*~ .]/g, '-');
+            
+            
+            document.getElementById('ketqua').value = kq;
+        }
+    </script>
+</body>
+</html>

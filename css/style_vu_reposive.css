@@ -1,3 +1,72 @@
+@media screen and (max-width: 1100px){
+    .banner_cate{
+        display: none;
+    }
+
+    .form_category .product {
+    
+        width: 25%;
+    }
+
+    #_cart1{
+        display: none;
+    }
+    #_cart2{
+        display: block;
+    }
+
+    .logo img{
+
+        height: 60px;
+    }
+
+    /* edit */
+    .left_detail{
+        width: 100%;
+    }
+
+    .right_detail{
+        display: none;
+    }
+
+    .left_detail #big-img {
+        width: 213px;
+        height: 248px;
+    }
+
+    .muahang input {
+        width: 26px;
+    }
+
+    .left_detail #btn-add-to-cart {
+        width: 165px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .logo img{
+        margin-top: 12px !important;
+    } 
+    .nav_list{
+        display: none;
+    }
+    .margintop{
+        margin-top: 25px;
+    }
+    .banner{
+        margin-bottom: 25px;
+    }
+    .form_category .product {
+    
+        width: 50%;
+    }
+    .banner_top{
+        display: none;
+    }
+}
+
+/* ----------------------------- */
 @media screen and (min-width: 1260px){
     /* reposive cho trang danh muc */
     .left-container .product{
@@ -38,7 +107,20 @@
         width: 25%;
     }
 
+
+    /* edit */
+    .left-frame{
+        width: 40%;
+    }
+
+    .left_detail #big-img {
+        width: 245px;
+    }
     
+    .left_detail #btn-add-to-cart {
+        width: 205px;
+    }
+
     /* end header */
     .container{
         width: 1000px;
@@ -112,6 +194,9 @@
     /* body{
         background-color: green;
     } */
+    /* edit */
+    
+    /* end edit */
 
     header .account {
         display: none;
@@ -172,6 +257,12 @@
     /* body{
         
     } */
+
+    /* edit */
+    
+
+
+    /* end edit */
     header .account {
         display: none;
     }

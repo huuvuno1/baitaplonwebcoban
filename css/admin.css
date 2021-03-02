@@ -1,0 +1,13 @@
+.right-admin-container {
+    padding-right: 30px;
+
+}
+
+#table-order, #table-user{
+    border-collapse: collapse;
+    border: 1px solid #d4d0d0;
+    text-align: center;
+}
+#table-user{
+    width: 100%;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/style_vu.css">
+    <link rel="stylesheet" href="css/style_vu_reposive.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="post.css">
+    <script src="/js/cart.js"></script>
+</head>
+
+<body>
+    <section class="navbar-admin" id="quang">
+        <div class="left-nav">
+            <img src="img/icon/admin.png" alt="">
+            <h1>SHOP ADMIN</h1>
+        </div>
+
+        <div class="right-nav">
+            <div class="user">
+                <img src="img/icon/avatar.jpg" alt="" class="avatar">
+                <!-- <span id="name-admin">Nguyễn Hữu Vũ</span> -->
+                <ul class="ul-boss">
+                    <li id="name-admin">Nguyễn Hữu Vũ</li>
+                    <li id="menu_acc">
+                        <!-- da them id menu-acc -->
+                        <ul class="option-x">
+                            <li>
+                                <a href="">Profile</a>
+                            </li>
+                            <li>
+                                <a href="/logout">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <div class="left-admin-container">
+            <ul class="menu-admin">
+                <li class='__select' onclick="loadForm(1)" style="font-weight: bold;">Quản lý sản phẩm</li>
+                <li class='__select' onclick="loadForm(2)">Quản lý người dùng</li>
+                <li class='__select' onclick="loadForm(3)">Quản lý đơn hàng</li>
+            </ul>
+        </div>
+        <div class="right-admin-container">
+
+            <div class="post">
+                <form action="/api/addproduct" method="POST" enctype="multipart/form-data" class="form_edit_overflow">
+                    <h2>Phần thông tin sản phẩm</h2>
+
+                    <table id="table-add">
+                        <tr>
+                            <td width="120px">Tên sản phẩm</td>
+                            <td width="600px">
+                                <input type="text" id="name_pro" name="name_pro" oninput="gen()" runat="server"
+                                    class="input-add">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="120px">Thương hiệu</td>
+                            <td width="600px">
+                                <input type="text" id="thuong_hieu" name="thuong_hieu" runat="server" class="input-add">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Giá</td>
+                            <td><input type="text" id="price_pro" name="price_pro" runat="server" class="input-add">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Số Lượng</td>
+                            <td><input type="text" id="quantity_pro" name="quantity_pro" runat="server"
+                                    class="input-add"></td>
+                        </tr>
+                        <tr>
+                            <td>Các hình ảnh</td>
+                            <td id="image_sss" runat="server">
+                                <input type="file" title="Bạn có thể chọn nhiều file" multiple class="add-img"
+                                    class="input-add">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mức Giảm Giá</td>
+                            <td><input type="text" id="sale_pro" runat="server" class="input-add"></td>
+                        </tr>
+                        <tr>
+                            <td>Loại sản phẩm</td>
+                            <td>
+                                <select id="category_pro" name="category_pro">
+                                    <option value="may-tinh">Máy tính</option>
+                                    <option value="phu-kien">Phụ kiện</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mô tả ngắn</td>
+                            <td><textarea id="info_pro" runat="server" class="input-add" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>URL Sản Phẩm</td>
+                            <td><input type="text" id="url_pro" runat="server" class="input-add"></td>
+                        </tr>
+
+                    </table>
+
+                    <!-- post -->
+                    <h2>Phần bài viết</h2>
+
+                    <div id="post" name="a">
+                        <button type="button" onclick="addParagraph()" id="btn-add-para">Thêm đoạn văn</button>
+                        <fieldset class="paragraph">
+                            <legend class="index">
+                                <button type="button" onclick="removeParagraph(this)">Xóa đoạn văn
+                                    này</button>
+                            </legend>
+                            <br><br>
+                            <input type="text" placeholder="Nhập tiêu đề đoạn văn" class="paragraph_title">
+                            <textarea name="paragraph1" id="" cols="30" rows="10" class="paragraph_content" placeholder="
+                                Nội dung đoạn văn"></textarea><br>
+                            Chọn ảnh hiển thị trong đoạn văn: <input type="file" name="imgPost1" class="paragraph_file">
+                        </fieldset>
+
+                    </div>
+                    <div class="btn_form">
+                        <button type="button" onclick="resetForm()">Reset</button>
+                        <button id="save" type="button" onclick="saveProduct()">Lưu</button>
+                    </div>
+                    <div id="ak">
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+        <script src="js/admin_vu.js"></script>
+        <script src="js/vu.js"></script>
+</body>
+
+</html>

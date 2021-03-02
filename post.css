@@ -1,0 +1,65 @@
+.post{
+
+}
+
+.post_title, .paragraph_content{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#post{
+    padding: 0 0 0 62px;
+    margin-bottom: 80px;
+}
+
+.paragraph_title{
+    padding: 0 20px;
+    height: 35px;
+    font-size: 20px;
+    width: 90%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.btn_form{
+    margin-bottom: 80px;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.btn_form button{
+    height: 30px;
+    background: rgb(67, 67, 247);
+    color: white;
+    width: 100px;
+    cursor: pointer;
+}
+.paragraph_content{
+    padding: 20px;
+    font-size: 17px;
+    width: 90%;
+    margin-left: 20px;
+}
+
+body{
+    overflow-y: hidden;
+}
+
+.container-checkout form{
+    margin: 0 !important;
+}
+
+.right-admin-container{
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.paragraph{
+    padding-bottom: 30px;
+    margin: 50px 50px 50px 0;
+    border: 2px solid gray;
+}
+
+#btn-add-para{
+    height: 30px;
+}
